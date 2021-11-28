@@ -38,16 +38,16 @@ OS: Ubuntu
 
 1. [公式ドキュメント](https://python-poetry.org/docs/)に従って Poetry をインストールしてください。
 
-1. 以下のコマンドを実行して Poetry の仮想環境をアクティベートしてください。
-
-    ```shell
-    poetry shell
-    ```
-
 1. 以下のコマンドを実行して依存するパッケージをインストールしてください。
 
     ```shell
     poetry install
+    ```
+
+1. 以下のコマンドを実行して Poetry の仮想環境をアクティベートしてください。
+
+    ```shell
+    poetry shell
     ```
 
 1. Poetry の仮想環境を終了するには以下のコマンドを実行してください。
