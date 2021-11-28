@@ -62,6 +62,12 @@ OS: Ubuntu
 
 1. [公式ドキュメント](https://nox.thea.codes/en/stable/tutorial.html) に従って Nox をインストールしてください。
 
+1. Nox を Poetry と併用する場合、特定の session に必要なパッケージのみのインストールが困難になります。これを解決するために [nox-poetry](https://github.com/cjolowicz/nox-poetry) を用います。[公式ドキュメント](https://github.com/cjolowicz/nox-poetry#installation)に従って nox-poetry をインストールしてください。ここで nox-poetry の公式ドキュメント内で
+
+    > Important: This package must be installed into the same environment that Nox is run from. If you installed Nox using pipx, use the following command to install this package into the same environment:
+
+    と注意されているように Nox と nox-poetry は同一環境にインストールしなければならないことに注意してください。
+
 1. 以下のコマンドを実行すると Nox による半自動テストが行われます。
 
     ```shell
