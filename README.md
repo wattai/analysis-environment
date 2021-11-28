@@ -32,6 +32,12 @@ OS: Ubuntu
     pyenv install 3.9.9
     ```
 
+1. 以下のコマンドを実行して Python の仮想環境を有効化してください。
+
+    ```shell
+    pyenv local 3.9.9
+    ```
+
 ### Poetry
 
 本リポジトリでは [Poetry](https://python-poetry.org/) を使ってパッケージ管理を行います。以下の手順に従って依存関係をインストールしてください。
