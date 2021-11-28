@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sample"
+version = "0.1.0"
+description = "Default repository for analysis project."
+authors = ["wattai"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+flake8 = "^4.0.1"
+black = "^21.11b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
