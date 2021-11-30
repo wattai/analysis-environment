@@ -79,3 +79,26 @@ OS: Ubuntu
     ```shell
     nox
     ```
+
+### Documentation
+
+本リポジトリでは Sphinx を使って Python の docstrings からドキュメントを自動生成します。
+
+1. 以下のコマンドを実行して Sphinx をインストールしてください。
+
+    ```shell
+    pip install sphinx sphinx_rtd_theme sphinx-autobuild
+    ```
+
+1. 以下のコマンドを実行してドキュメントを生成してください。
+
+    ```shell
+    cd docs
+    make html
+    ```
+
+    またライブビルドを行うためには、以下のコマンドを実行してください。ファイルの変更に応じて自動的にページが更新されるようになります。
+
+    ```shell
+    make livehtml
+    ```
