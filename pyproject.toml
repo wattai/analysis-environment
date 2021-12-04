@@ -5,7 +5,7 @@ description = "Default repository for analysis project."
 authors = ["wattai"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
@@ -25,6 +25,12 @@ flake8-import-order = "^0.18.1"
 darglint = "^1.8.1"
 codecov = "^2.1.12"
 pytest-cov = "^3.0.0"
+mkdocs = "^1.2.3"
+mkdocs-material = "^8.0.3"
+mkdocstrings = "^0.16.2"
+nox = "^2021.10.1"
+nox-poetry = "^0.9.0"
+markdown-katex = "^202109.1033"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

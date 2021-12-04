@@ -4,6 +4,13 @@ from nox_poetry import session, Session
 
 
 @session
+def isort(session: Session):
+    """Run isort."""
+    session.install("isort")
+    session.run("isort", ".")
+
+
+@session
 def black(session: Session):
     """Run black code formatter."""
     session.install("black")
@@ -23,24 +30,24 @@ def lint(session: Session):
         "flake8-import-order",
         "darglint",
     )
-    session.run("flake8", ".")
+    session.run("flake8", ".", "--statistics")
 
 
 @session
 def mypy(session: Session):
     """Type check using mypy."""
     session.install("mypy", "pytest")
-    session.run("mypy", ".")
+    session.run("mypy", "src")
 
 
-@session
+@session(python=["3.9", "3.10"])
 def tests(session: Session):
     """Run the test suite."""
     session.install(".", "pytest")
     session.run("pytest", ".")
 
 
-@session()
+@session
 def coverage(session: Session) -> None:
     """Upload coverage data."""
     session.install("coverage[toml]", "codecov")
@@ -51,5 +58,5 @@ def coverage(session: Session) -> None:
 @session
 def docs(session: Session):
     """Build the documentation."""
-    session.install("sphinx", "sphinx_rtd_theme", "sphinx-autodoc-typehints")
-    session.run("sphinx-build", "docs", "docs/_build")
+    session.install(".", "mkdocs", "mkdocs-material", "mkdocstrings")
+    session.run("mkdocs", "build")

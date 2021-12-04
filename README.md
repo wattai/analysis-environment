@@ -82,23 +82,18 @@ OS: Ubuntu
 
 ### Documentation
 
-本リポジトリでは Sphinx を使って Python の docstrings からドキュメントを自動生成します。
+本リポジトリでは [MkDocs](https://www.mkdocs.org) と [mkdocstrings](https://mkdocstrings.github.io) を使って Python の docstrings からドキュメントを自動生成します。
 
-1. 以下のコマンドを実行して Sphinx をインストールしてください。
+1. 以下のコマンドを実行して MkDocs のビルドが可能です。
 
     ```shell
-    pip install sphinx sphinx_rtd_theme sphinx-autobuild
+    mkdocs build
     ```
 
-1. 以下のコマンドを実行してドキュメントを生成してください。
+    実行後に site ディレクトリが作成され、`site/index.html` をブラウザで読み込むことでドキュメントを読むことができます。
+
+2. また以下のコマンドを実行することで、ブラウザが自動的に立ち上がりファイルの変更に応じて自動的にページが更新されるようになります。
 
     ```shell
-    cd docs
-    make html
-    ```
-
-    またライブビルドを行うためには、以下のコマンドを実行してください。ファイルの変更に応じて自動的にページが更新されるようになります。
-
-    ```shell
-    make livehtml
+    mkdocs serve
     ```
