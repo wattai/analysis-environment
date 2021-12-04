@@ -10,7 +10,7 @@ OS: Ubuntu
 
 ### Python
 
-以下の手順に従って Python 環境を構築してください。
+以下の手順に従って Python の仮想環境を構築してください。
 
 1. 以下のようにして、必要モジュールをインストールしてください。
 
@@ -62,9 +62,25 @@ OS: Ubuntu
     exit
     ```
 
+### pre-commit
+
+本リポジトリでは、リポジトリ内のファイルをクリーンに保つために [pre-commit](https://pre-commit.com/) を使ってコミットの直前にファイルのチェックを行います。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
+
+1. 以下のコマンドを実行して pre-commit hooks のインストールを行ってください。このコマンドが完了すると `git commit` を実行した直後に pre-commit によるファイルチェックが実行されます。
+
+    ```shell
+    pre-commit install
+    ```
+
+2. 以下のコマンドを実行すると pre-commit hooks に登録されているすべての hooks が実行されます。
+
+    ```shell
+    pre-commit run -a
+    ```
+
 ### Nox
 
-本リポジトリでは [Nox](https://nox.thea.codes/en/stable/) を使って仮想環境の構築を含めたコードの半自動テストを行います。以下の手順に従って、コードの lint と test が行われることを確認します。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
+本リポジトリでは、多数あるテストスイートの実行を簡単化するために [Nox](https://nox.thea.codes/en/stable/) を使って仮想環境の構築を含めたコードの半自動テストを行います。以下の手順に従って、コードの lint と test が行われることを確認します。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
 
 1. 以下のコマンドを実行すると Nox による半自動テストが行われます。
 
@@ -76,7 +92,7 @@ OS: Ubuntu
 
 本リポジトリでは [MkDocs](https://www.mkdocs.org) と [mkdocstrings](https://mkdocstrings.github.io) を使って Python の docstrings からドキュメントを自動生成します。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
 
-1. 以下のコマンドを実行して MkDocs のビルドが可能です。
+1. 以下のコマンドを実行すると MkDocs のビルドが可能です。
 
     ```shell
     mkdocs build
@@ -84,7 +100,7 @@ OS: Ubuntu
 
     実行後に site ディレクトリが作成され、`site/index.html` をブラウザで読み込むことでドキュメントを読むことができます。
 
-2. また以下のコマンドを実行することで、ブラウザが自動的に立ち上がりファイルの変更に応じて自動的にページが更新されるようになります。
+2. また以下のコマンドを実行すると、ブラウザが自動的に立ち上がりファイルの変更に応じて自動的にページが更新されるようになります。
 
     ```shell
     mkdocs serve
