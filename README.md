@@ -64,15 +64,7 @@ OS: Ubuntu
 
 ### Nox
 
-本リポジトリでは [Nox](https://nox.thea.codes/en/stable/) を使って仮想環境の構築を含めたコードの半自動テストを行います。以下の手順に従って、コードの lint と test が行われることを確認します。
-
-1. [公式ドキュメント](https://nox.thea.codes/en/stable/tutorial.html) に従って Nox をインストールしてください。
-
-1. Nox を Poetry と併用する場合、特定の session に必要なパッケージのみのインストールが困難になります。これを解決するために [nox-poetry](https://github.com/cjolowicz/nox-poetry) を用います。[公式ドキュメント](https://github.com/cjolowicz/nox-poetry#installation)に従って nox-poetry をインストールしてください。ここで nox-poetry の公式ドキュメント内で
-
-    > Important: This package must be installed into the same environment that Nox is run from. If you installed Nox using pipx, use the following command to install this package into the same environment:
-
-    と注意されているように Nox と nox-poetry は同一環境にインストールしなければならないことに注意してください。
+本リポジトリでは [Nox](https://nox.thea.codes/en/stable/) を使って仮想環境の構築を含めたコードの半自動テストを行います。以下の手順に従って、コードの lint と test が行われることを確認します。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
 
 1. 以下のコマンドを実行すると Nox による半自動テストが行われます。
 
@@ -82,7 +74,7 @@ OS: Ubuntu
 
 ### Documentation
 
-本リポジトリでは [MkDocs](https://www.mkdocs.org) と [mkdocstrings](https://mkdocstrings.github.io) を使って Python の docstrings からドキュメントを自動生成します。
+本リポジトリでは [MkDocs](https://www.mkdocs.org) と [mkdocstrings](https://mkdocstrings.github.io) を使って Python の docstrings からドキュメントを自動生成します。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
 
 1. 以下のコマンドを実行して MkDocs のビルドが可能です。
 
