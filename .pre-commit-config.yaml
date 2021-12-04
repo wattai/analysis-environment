@@ -3,13 +3,13 @@ repos:
     rev: v4.0.1
     hooks:
     - id: detect-private-key
-    -   id: pretty-format-json
-        args: [--autofix]
-    -   id: check-toml
-    -   id: check-xml
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
+    - id: pretty-format-json
+      args: [--autofix]
+    - id: check-toml
+    - id: check-xml
+    - id: check-yaml
+    - id: end-of-file-fixer
+    - id: trailing-whitespace
 -   repo: local
     hooks:
     - id: docformatter

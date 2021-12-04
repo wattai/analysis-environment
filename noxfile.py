@@ -65,5 +65,5 @@ def coverage(session: Session) -> None:
 @session
 def docs(session: Session):
     """Build the documentation."""
-    session.install(".", "mkdocs", "mkdocs-material", "mkdocstrings")
+    session.install(".", "mkdocs", "mkdocs-material", "mkdocstrings", "markdown-katex")
     session.run("mkdocs", "build")
