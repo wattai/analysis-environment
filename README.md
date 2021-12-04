@@ -66,13 +66,28 @@ OS: Ubuntu
 
 本リポジトリでは、リポジトリ内のファイルをクリーンに保つために [pre-commit](https://pre-commit.com/) を使ってコミットの直前にファイルのチェックを行います。`poetry install`, `poetry shell` が済んだ状態で以下の手順に従ってください。
 
+1. [nvm 公式ドキュメント](https://github.com/nvm-sh/nvm#installing-and-updating) の手順に従って nvm のインストールを行ってください。
+
+1. 以下のコマンドを実行して node のインストールと node 仮想環境のアクティベートを行ってください。
+
+    ```shell
+    nvm install --lts
+    nvm use --lts
+    ```
+
+1. 以下のコマンドを実行して node パッケージのインストールを行ってください。
+
+    ```shell
+    npm ci
+    ```
+
 1. 以下のコマンドを実行して pre-commit hooks のインストールを行ってください。このコマンドが完了すると `git commit` を実行した直後に pre-commit によるファイルチェックが実行されます。
 
     ```shell
     pre-commit install
     ```
 
-2. 以下のコマンドを実行すると pre-commit hooks に登録されているすべての hooks が実行されます。
+1. 以下のコマンドを実行すると pre-commit hooks に登録されているすべての hooks が実行されます。
 
     ```shell
     pre-commit run -a
@@ -100,7 +115,7 @@ OS: Ubuntu
 
     実行後に site ディレクトリが作成され、`site/index.html` をブラウザで読み込むことでドキュメントを読むことができます。
 
-2. また以下のコマンドを実行すると、ブラウザが自動的に立ち上がりファイルの変更に応じて自動的にページが更新されるようになります。
+1. また以下のコマンドを実行すると、ブラウザが自動的に立ち上がりファイルの変更に応じて自動的にページが更新されるようになります。
 
     ```shell
     mkdocs serve
