@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from nox_poetry import session, Session
+from nox_poetry import Session, session
+
+
+@session
+def docformatter(session: Session):
+    """Run docformatter."""
+    session.install("docformatter")
+    session.run("docformatter", "--in-place", "--recursive", ".")
 
 
 @session
