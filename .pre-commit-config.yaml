@@ -1,44 +1,44 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
-    - id: detect-private-key
-    - id: pretty-format-json
-      args: [--autofix]
-    - id: check-toml
-    - id: check-xml
-    - id: check-yaml
-    - id: end-of-file-fixer
-    - id: trailing-whitespace
--   repo: local
+      - id: detect-private-key
+      - id: pretty-format-json
+        args: [--autofix]
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: local
     hooks:
-    - id: markdownlint-cli
-      name: Lint Markdown Files
-      entry: markdownlint --fix --ignore node_modules
-      language: node
-      types: [file, markdown]
-    - id: docformatter
-      name: Format Docstrings in Python Files
-      entry: docformatter --in-place --recursive
-      language: python
-      types: [file, python]
-    - id: black
-      name: Format Python Files
-      entry: black
-      language: python
-      types: [file, python]
-    - id: isort
-      name: Format Import Order in Python Files
-      entry: isort
-      language: python
-      types: [file, python]
-    - id: flake8
-      name: Lint Python Files
-      entry: flake8
-      language: python
-      types: [file, python]
-    - id: mypy
-      name: Type Check for Python Files
-      entry: mypy
-      language: python
-      types: [file, python]
+      - id: markdownlint-cli
+        name: Lint Markdown Files
+        entry: markdownlint --fix --ignore node_modules
+        language: node
+        types: [file, markdown]
+      - id: docformatter
+        name: Format Docstrings in Python Files
+        entry: docformatter --in-place --recursive
+        language: python
+        types: [file, python]
+      - id: black
+        name: Format Python Files
+        entry: black
+        language: python
+        types: [file, python]
+      - id: isort
+        name: Format Import Order in Python Files
+        entry: isort
+        language: python
+        types: [file, python]
+      - id: flake8
+        name: Lint Python Files
+        entry: flake8
+        language: python
+        types: [file, python]
+      - id: mypy
+        name: Type Check for Python Files
+        entry: mypy
+        language: python
+        types: [file, python]

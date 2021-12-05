@@ -1,23 +1,23 @@
 site_name: Documentation
 
 theme:
-    name: material
-    language: ja
-    palette:
-        primary: red
+  name: material
+  language: ja
+  palette:
+    primary: red
 
 extra_css:
-    - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
-    - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
+  - "//fonts.googleapis.com/earlyaccess/notosansjp.css"
+  - "//fonts.googleapis.com/css?family=Open+Sans:600,800"
 
 plugins:
-    - search
-    - mkdocstrings:
-        watch:
-            - src
+  - search
+  - mkdocstrings:
+      watch:
+        - src
 
 markdown_extensions:
-    - markdown_katex:
-        no_inline_svg: True
-        insert_fonts_css: True
-        macro-file: macros.tex
+  - markdown_katex:
+      no_inline_svg: True
+      insert_fonts_css: True
+      macro-file: macros.tex
